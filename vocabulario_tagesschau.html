@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocabulario – Tagesschau in Einfacher Sprache</title>
+  <style>
+    :root {
+      --azul: #173f73;
+      --celeste: #eaf3fb;
+      --amarillo: #fff2bd;
+      --texto: #1f2937;
+      --borde: #cbd5e1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 32px 18px;
+      color: var(--texto);
+      background: #f4f7fa;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+
+    main {
+      width: min(960px, 100%);
+      margin: 0 auto;
+      padding: 36px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 28px rgba(23, 63, 115, 0.12);
+    }
+
+    header {
+      padding-bottom: 20px;
+      border-bottom: 4px solid var(--azul);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      color: var(--azul);
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+    }
+
+    header p {
+      margin: 0;
+      color: #475569;
+    }
+
+    h2 {
+      margin: 32px 0 12px;
+      color: var(--azul);
+      font-size: 1.4rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border: 1px solid var(--borde);
+      border-radius: 10px;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border: 1px solid var(--borde);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: #ffffff;
+      background: var(--azul);
+    }
+
+    tbody tr:nth-child(even) {
+      background: var(--celeste);
+    }
+
+    .wort {
+      font-weight: 700;
+      color: #12345b;
+    }
+
+    .hinweis {
+      margin-top: 30px;
+      padding: 16px 18px;
+      background: var(--amarillo);
+      border-left: 5px solid #d7a900;
+      border-radius: 8px;
+    }
+
+    .hinweis p {
+      margin: 4px 0;
+    }
+
+    footer {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid var(--borde);
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    footer a {
+      color: var(--azul);
+    }
+
+    @media (max-width: 650px) {
+      body {
+        padding: 0;
+        background: #ffffff;
+      }
+
+      main {
+        padding: 22px 14px;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      th,
+      td {
+        padding: 9px 8px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: #ffffff;
+      }
+
+      main {
+        width: 100%;
+        padding: 10mm;
+        box-shadow: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Wichtiger Wortschatz</h1>
+      <p><strong>Tagesschau in Einfacher Sprache</strong> – 10 wichtige Verben und 10 wichtige Nomen</p>
+    </header>
+
+    <section>
+      <h2>1. Die 10 wichtigsten Verben</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Nr.</th>
+            <th scope="col">Deutsch</th>
+            <th scope="col">Español</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td class="wort">ernennen</td><td>nombrar, designar</td></tr>
+          <tr><td>2</td><td class="wort">wählen</td><td>elegir</td></tr>
+          <tr><td>3</td><td class="wort">regieren</td><td>gobernar</td></tr>
+          <tr><td>4</td><td class="wort">arbeiten</td><td>trabajar</td></tr>
+          <tr><td>5</td><td class="wort">abbauen</td><td>reducir, eliminar (puestos de trabajo)</td></tr>
+          <tr><td>6</td><td class="wort">sterben</td><td>morir</td></tr>
+          <tr><td>7</td><td class="wort">erschüttern</td><td>sacudir</td></tr>
+          <tr><td>8</td><td class="wort">brennen</td><td>arder, quemarse</td></tr>
+          <tr><td>9</td><td class="wort">löschen</td><td>apagar, extinguir</td></tr>
+          <tr><td>10</td><td class="wort">kämpfen</td><td>luchar, combatir</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>2. Die 10 wichtigsten Nomen</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Nr.</th>
+            <th scope="col">Deutsch</th>
+            <th scope="col">Plural</th>
+            <th scope="col">Español</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td class="wort">die Regierung</td><td>die Regierungen</td><td>el Gobierno</td></tr>
+          <tr><td>2</td><td class="wort">der Minister</td><td>die Minister</td><td>el ministro</td></tr>
+          <tr><td>3</td><td class="wort">der Vorsitzende</td><td>die Vorsitzenden</td><td>el presidente, el dirigente</td></tr>
+          <tr><td>4</td><td class="wort">die Unionsfraktion</td><td>die Unionsfraktionen</td><td>el grupo parlamentario de la Unión</td></tr>
+          <tr><td>5</td><td class="wort">der Arbeitsplatz</td><td>die Arbeitsplätze</td><td>el puesto de trabajo</td></tr>
+          <tr><td>6</td><td class="wort">das Erdbeben</td><td>die Erdbeben</td><td>el terremoto</td></tr>
+          <tr><td>7</td><td class="wort">der Tote / die Tote</td><td>die Toten</td><td>el fallecido / la fallecida</td></tr>
+          <tr><td>8</td><td class="wort">der Waldbrand</td><td>die Waldbrände</td><td>el incendio forestal</td></tr>
+          <tr><td>9</td><td class="wort">die Feuerwehr</td><td>die Feuerwehren</td><td>los bomberos</td></tr>
+          <tr><td>10</td><td class="wort">das Wetter</td><td>—</td><td>el tiempo, el clima</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="hinweis">
+      <p><strong>Hinweis:</strong> Die Benutzung eines Wörterbuchs ist erlaubt.</p>
+      <p><strong>Importante:</strong> Está permitido usar el diccionario.</p>
+    </aside>
+
+    <footer>
+      Video:
+      <a href="https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1358.html"
+         target="_blank" rel="noopener noreferrer">
+        Tagesschau in Einfacher Sprache
+      </a>
+    </footer>
+  </main>
+</body>
+</html>
