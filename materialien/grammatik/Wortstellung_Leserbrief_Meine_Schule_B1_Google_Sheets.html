@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wortstellung und Leserbrief – Meine Schule B1</title>
+  <style>
+    :root{--blue:#3156c8;--light:#eef3ff;--ink:#182033;--line:#cbd5e1;--green:#167549;--red:#b82c2c}
+    *{box-sizing:border-box}
+    body{margin:0;background:#f3f6fb;color:var(--ink);font:16px/1.5 "Century Gothic",Arial,sans-serif}
+    main{max-width:940px;margin:25px auto;padding:38px 46px;background:#fff;border-radius:18px;box-shadow:0 8px 30px #18325b18}
+    h1{color:var(--blue);margin:0;font-size:1.9rem}h2{margin-top:34px;padding-bottom:7px;border-bottom:2px solid var(--light);font-size:1.25rem}
+    .sub{color:#5c687a;margin:4px 0 22px}.meta{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+    .meta label{font-weight:bold}.meta input{margin-top:5px}.required{color:var(--red)}
+    .rule,.box{background:var(--light);border-left:5px solid var(--blue);padding:13px 17px;border-radius:8px;margin:15px 0}
+    .item{margin:17px 0}.parts{font-weight:bold;color:#334155;margin-bottom:6px}
+    input[type=text],select,textarea{font:inherit;border:1.5px solid var(--line);border-radius:7px;padding:8px 10px;width:100%;background:#fff}
+    select{width:auto;min-width:180px}textarea{min-height:230px;resize:vertical}
+    input:focus,select:focus,textarea:focus{outline:3px solid #3156c822;border-color:var(--blue)}
+    .correct{border-color:var(--green)!important;background:#effcf5!important}.wrong{border-color:var(--red)!important;background:#fff1f1!important}
+    .feedback{font-size:.9rem;font-weight:bold;margin-top:4px}.ok{color:var(--green)}.no{color:var(--red)}
+    table{width:100%;border-collapse:collapse;margin:12px 0}th,td{border:1px solid var(--line);padding:9px;text-align:left}th{background:var(--light)}
+    .buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}button{border:0;border-radius:9px;padding:10px 16px;font:inherit;font-weight:bold;cursor:pointer;background:var(--blue);color:#fff}
+    button.secondary{background:#e7edf8;color:var(--ink)}#score{font-weight:bold;margin:14px 0}
+    #sendStatus{margin:12px 0;font-weight:bold}.status-ok{color:var(--green)}.status-error{color:var(--red)}
+    .small{font-size:.9rem;color:#64748b}.checklist label{display:block;margin:7px 0}
+    .start-screen,.fullscreen-warning{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:22px;background:#132d55f5;color:#fff;text-align:center}
+    .start-card,.warning-card{width:min(620px,100%);padding:32px;border:1px solid #ffffff55;border-radius:20px;background:#ffffff18;box-shadow:0 20px 60px #07182e80;backdrop-filter:blur(12px)}
+    .start-card h2,.warning-card h2{margin:0 0 10px;font-size:1.8rem}.start-card p,.warning-card p{line-height:1.5}
+    .start-identity{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0;text-align:left}
+    .start-identity label{font-weight:bold}.start-identity input{margin-top:5px;border-color:#fff}
+    .fullscreen-warning{display:none;background:#721c24f2}.fullscreen-warning.show{display:grid}
+    .warning-card{background:#ffffff20}.warning-card strong{display:block;margin:10px 0;color:#ffe79a}
+    .start-error{min-height:22px;color:#ffe79a;font-weight:bold}
+    @media(max-width:650px){main{margin:0;padding:25px 18px;border-radius:0}.meta,.start-identity{grid-template-columns:1fr}table{font-size:.9rem}}
+    @media print{body{background:#fff;font-size:12px}main{margin:0;padding:8mm;max-width:none;box-shadow:none}.buttons,#score,#sendStatus{display:none!important}h2{margin-top:20px}input,textarea,select{border:0;border-bottom:1px solid #333;border-radius:0;background:transparent}.rule,.box{break-inside:avoid}}
+  </style>
+</head>
+<body>
+<section class="start-screen" id="startScreen">
+  <div class="start-card">
+    <h2>Wortstellung und Leserbrief</h2>
+    <p>Die Übung wird im Vollbild bearbeitet. Das Verlassen des Vollbilds und der Wechsel zu einer anderen Registerkarte werden protokolliert.</p>
+    <div class="box">Deine Anmeldung wird automatisch aus dem DSD-I-Portal übernommen.</div>
+    <div id="startError" class="start-error"></div>
+    <button onclick="startExercise()">Übung im Vollbild starten</button>
+  </div>
+</section>
+<section class="fullscreen-warning" id="fullscreenWarning">
+  <div class="warning-card">
+    <h2>Vollbild wurde verlassen</h2>
+    <strong>Diese Aktion wurde im Arbeitsprotokoll registriert.</strong>
+    <p>Bitte kehre zum Vollbild zurück, um die Übung fortzusetzen.</p>
+    <button onclick="returnToFullscreen()">Zum Vollbild zurückkehren</button>
+  </div>
+</section>
+<main>
+  <h1>Wortstellung und Leserbrief</h1>
+  <p class="sub">Thema: Meine Schule · Niveau B1</p>
+  <div class="box"><strong>Angemeldet über das DSD-I-Portal.</strong> Dein Ergebnis wird nach dem Senden automatisch der richtigen Schülerin zugeordnet.</div>
+
+  <div class="rule">
+    <strong>Merke:</strong> Im Hauptsatz steht das konjugierte Verb auf Position 2. Im Nebensatz mit <em>weil, dass, obwohl</em> oder <em>wenn</em> steht das Verb am Ende.
+  </div>
+
+  <h2>1. Sätze ordnen</h2>
+  <p>Bringe die Satzteile in die richtige Reihenfolge. Schreibe den vollständigen Satz.</p>
+  <div id="orderTasks"></div>
+
+  <h2>2. Das Satzanfang verändern</h2>
+  <p>Beginne mit dem fett gedruckten Satzteil. Achte auf die Position des Verbs.</p>
+  <div id="transformTasks"></div>
+
+  <h2>3. Hauptsatz oder Nebensatz?</h2>
+  <p>Wähle die richtige Verbposition.</p>
+  <div id="choiceTasks"></div>
+
+  <h2>4. Konnektoren im Leserbrief</h2>
+  <p>Ergänze: <strong>weil · dass · obwohl · deshalb · wenn</strong>. Jedes Wort wird einmal verwendet.</p>
+  <div id="connectorTasks"></div>
+
+  <h2>5. Einen Leserbrief planen</h2>
+  <p>Ordne jedem Teil eine passende Funktion zu.</p>
+  <table>
+    <thead><tr><th>Textteil</th><th>Funktion</th></tr></thead>
+    <tbody id="letterPlan"></tbody>
+  </table>
+
+  <h2>6. Dein Leserbrief</h2>
+  <div class="box">
+    <strong>Situation:</strong> In der Schülerzeitung steht: „Unsere Schule ist perfekt. Man muss nichts verändern.“<br>
+    Schreibe einen Leserbrief mit <strong>80–100 Wörtern</strong>. Nenne etwas Positives, ein Problem und einen Verbesserungsvorschlag.
+  </div>
+  <p><strong>Hilfreiche Redemittel:</strong></p>
+  <p>Liebe Redaktion, … · Ich habe den Beitrag über unsere Schule gelesen. · Meiner Meinung nach … · Besonders gut finde ich, dass … · Ein Problem ist, dass … · Deshalb sollte die Schule … · Viele Grüße</p>
+  <textarea id="letter" placeholder="Liebe Redaktion,&#10;&#10;ich habe den Beitrag über unsere Schule gelesen. Meiner Meinung nach …" oninput="countWords()"></textarea>
+  <p id="wordCount" class="small">0 Wörter</p>
+  <div class="checklist">
+    <strong>Selbstkontrolle:</strong>
+    <label><input type="checkbox"> Mein Text hat 80–100 Wörter.</label>
+    <label><input type="checkbox"> Ich habe meine Meinung klar formuliert.</label>
+    <label><input type="checkbox"> Ich habe etwas Positives und ein Problem genannt.</label>
+    <label><input type="checkbox"> Ich habe einen Verbesserungsvorschlag gemacht.</label>
+    <label><input type="checkbox"> Im Hauptsatz steht das Verb auf Position 2, im Nebensatz am Ende.</label>
+  </div>
+
+  <div class="buttons">
+    <button onclick="checkAll()">Antworten prüfen</button>
+    <button id="sendButton" onclick="submitWork()">Arbeit senden</button>
+    <button class="secondary" onclick="resetAll()">Neu beginnen</button>
+    <button class="secondary" onclick="window.print()">Drucken / PDF</button>
+  </div>
+  <div id="score" role="status"></div>
+  <div id="sendStatus" role="status" aria-live="polite"></div>
+</main>
+<script src="https://dsd-i-intensivtraining.ramon-reyes.workers.dev/dsd-connector.js"></script>
+<script>
+let exerciseStarted=false;
+let exerciseStartedAt=0;
+let fullscreenExits=0;
+let tabExits=0;
+const eventLog=[];
+
+function registerEvent(type,detail=""){
+  if(!exerciseStarted)return;
+  const record={
+    kind:"event",
+    timestamp:new Date().toISOString(),
+    type,detail,fullscreenExits,tabExits
+  };
+  eventLog.push(record);
+}
+async function startExercise(){
+  const error=document.getElementById("startError");
+  if(!window.DSDTraining?.connected){
+    error.textContent="Bitte öffne diese Übung über das DSD-I-Portal.";
+    return;
+  }
+  error.textContent="";
+  exerciseStarted=true;
+  exerciseStartedAt=Date.now();
+  document.getElementById("startScreen").style.display="none";
+  try{
+    await document.documentElement.requestFullscreen();
+    registerEvent("session_started","Übung im Vollbild gestartet");
+  }catch(error){
+    exerciseStarted=false;
+    document.getElementById("startScreen").style.display="grid";
+    document.getElementById("startError").textContent="Der Vollbildmodus konnte nicht gestartet werden. Bitte erlaube Vollbild und versuche es erneut.";
+  }
+}
+async function returnToFullscreen(){
+  try{
+    await document.documentElement.requestFullscreen();
+    document.getElementById("fullscreenWarning").classList.remove("show");
+    registerEvent("fullscreen_return","Rückkehr zum Vollbild");
+  }catch(error){
+    document.querySelector("#fullscreenWarning .warning-card p").textContent="Der Vollbildmodus konnte nicht gestartet werden. Bitte versuche es erneut.";
+  }
+}
+document.addEventListener("fullscreenchange",()=>{
+  if(!exerciseStarted)return;
+  if(!document.fullscreenElement){
+    fullscreenExits++;
+    document.getElementById("fullscreenWarning").classList.add("show");
+    registerEvent("fullscreen_exit","Vollbild verlassen");
+  }else{
+    document.getElementById("fullscreenWarning").classList.remove("show");
+  }
+});
+document.addEventListener("visibilitychange",()=>{
+  if(!exerciseStarted)return;
+  if(document.hidden){
+    tabExits++;
+    registerEvent("tab_hidden","Andere Registerkarte oder Anwendung geöffnet");
+  }else{
+    registerEvent("tab_visible","Zur Übung zurückgekehrt");
+  }
+});
+const orderData=[
+ ["meine Schule / sehr gut / gefällt / mir","Meine Schule gefällt mir sehr gut."],
+ ["in der Pause / treffe / meine Freundinnen / ich","In der Pause treffe ich meine Freundinnen."],
+ ["weil / interessant / der Unterricht / ist / Deutsch / mag / ich","Ich mag Deutsch, weil der Unterricht interessant ist."],
+ ["dass / finde / die Pausen / zu kurz sind / ich","Ich finde, dass die Pausen zu kurz sind."],
+ ["obwohl / viele Hausaufgaben / wir / bekommen / gehe / gern / ich / zur Schule","Obwohl wir viele Hausaufgaben bekommen, gehe ich gern zur Schule."],
+ ["deshalb / mehr Sportangebote / sollte / die Schule / anbieten","Deshalb sollte die Schule mehr Sportangebote anbieten."]
+];
+document.getElementById("orderTasks").innerHTML=orderData.map((x,i)=>`<div class="item"><div class="parts">${i+1}. ${x[0]}</div><input type="text" data-answer="${x[1]}" aria-label="Satz ${i+1}"><div class="feedback"></div></div>`).join("");
+
+const transformData=[
+ ["Wir essen <strong>in der Mensa</strong> zu Mittag.","In der Mensa essen wir zu Mittag."],
+ ["Ich lerne <strong>am Nachmittag</strong> für die Prüfungen.","Am Nachmittag lerne ich für die Prüfungen."],
+ ["Die Schülerinnen können <strong>in der Bibliothek</strong> arbeiten.","In der Bibliothek können die Schülerinnen arbeiten."],
+ ["Wir machen <strong>einmal pro Woche</strong> Sport.","Einmal pro Woche machen wir Sport."]
+];
+document.getElementById("transformTasks").innerHTML=transformData.map((x,i)=>`<div class="item"><div>${i+1}. ${x[0]}</div><input type="text" data-answer="${x[1]}" aria-label="Umformung ${i+1}"><div class="feedback"></div></div>`).join("");
+
+const choiceData=[
+ ["Am Nachmittag _____ ich in der Bibliothek.","lerne",["lerne","ich lerne","lernen"]],
+ ["Ich gehe in die Bibliothek, weil wir dort ruhig _____.","lernen",["wir lernen","lernen","lerne"]],
+ ["Ich finde, dass unsere Mensa sehr gut _____.","ist",["ist","sehr gut ist sie","sind"]],
+ ["Wenn das Wetter schön ist, _____ wir draußen lernen.","können",["wir können","können","lernen können wir"]],
+ ["Obwohl ich viele Hausaufgaben _____, treffe ich meine Freunde.","habe",["ich habe","habe","haben"]]
+];
+document.getElementById("choiceTasks").innerHTML=choiceData.map((x,i)=>`<div class="item">${i+1}. ${x[0]}<br><select data-answer="${x[1]}" aria-label="Verbposition ${i+1}"><option>auswählen …</option>${x[2].map(y=>`<option>${y}</option>`).join("")}</select><span class="feedback"></span></div>`).join("");
+
+const connectorData=[
+ ["Ich finde, _____ unsere Schule viele gute Angebote hat.","dass"],
+ ["_____ die Schule modern ist, gibt es zu wenige Computer.","obwohl"],
+ ["Die Pausen sind sehr kurz. _____ sollten sie verlängert werden.","deshalb"],
+ ["Ich mag die Bibliothek, _____ man dort in Ruhe arbeiten kann.","weil"],
+ ["_____ die Schülerinnen mitentscheiden können, entstehen bessere Ideen.","wenn"]
+];
+document.getElementById("connectorTasks").innerHTML=connectorData.map((x,i)=>`<div class="item">${i+1}. ${x[0]}<br><select data-answer="${x[1]}" aria-label="Konnektor ${i+1}"><option>auswählen …</option><option>weil</option><option>dass</option><option>obwohl</option><option>deshalb</option><option>wenn</option></select><span class="feedback"></span></div>`).join("");
+
+const planData=[
+ ["Liebe Redaktion,","Anrede"],
+ ["Ich habe den Beitrag über unsere Schule gelesen.","Bezug zum Artikel"],
+ ["Meiner Meinung nach ist unsere Schule gut, aber nicht perfekt.","Eigene Meinung"],
+ ["Besonders gut finde ich, dass …","Positiver Aspekt"],
+ ["Deshalb sollte die Schule …","Verbesserungsvorschlag"],
+ ["Viele Grüße","Gruß"]
+];
+const functions=["auswählen …","Anrede","Bezug zum Artikel","Eigene Meinung","Positiver Aspekt","Verbesserungsvorschlag","Gruß"];
+document.getElementById("letterPlan").innerHTML=planData.map((x,i)=>`<tr><td>${x[0]}</td><td><select data-answer="${x[1]}" aria-label="Textfunktion ${i+1}">${functions.map(y=>`<option>${y}</option>`).join("")}</select><span class="feedback"></span></td></tr>`).join("");
+
+function norm(s){return s.trim().toLocaleLowerCase("de").replace(/[.!?]+$/,"").replace(/\s+/g," ")}
+function checkAll(){
+  const fields=[...document.querySelectorAll("[data-answer]")];let right=0;
+  fields.forEach(f=>{
+    const ok=norm(f.value)===norm(f.dataset.answer);f.classList.toggle("correct",ok);f.classList.toggle("wrong",!ok);
+    const fb=f.parentElement.querySelector(".feedback");if(fb){fb.textContent=ok?" ✓ Richtig":" ✗ Bitte noch einmal versuchen";fb.className="feedback "+(ok?"ok":"no")}
+    if(ok)right++;
+  });
+  document.getElementById("score").textContent=`Ergebnis: ${right} von ${fields.length} Punkten. Der Leserbrief wird zusätzlich von der Lehrkraft korrigiert.`;
+}
+function countWords(){
+  const t=document.getElementById("letter").value.trim(),n=t?t.split(/\s+/).length:0,o=document.getElementById("wordCount");
+  o.textContent=`${n} Wörter`;o.style.color=n>=80&&n<=100?"var(--green)":n>100?"var(--red)":"#64748b";
+}
+function collectAnswers(){
+  return [...document.querySelectorAll("[data-answer]")].map((field,index)=>({
+    number:index+1,
+    type:field.tagName.toLowerCase(),
+    answer:field.value,
+    correct:norm(field.value)===norm(field.dataset.answer)
+  }));
+}
+async function submitWork(){
+  const status=document.getElementById("sendStatus");
+  const button=document.getElementById("sendButton");
+  if(!window.DSDTraining?.connected){
+    status.className="status-error";
+    status.textContent="Bitte öffne diese Übung über das DSD-I-Portal.";
+    return;
+  }
+  const answers=collectAnswers();
+  const correct=answers.filter(x=>x.correct).length;
+  const letter=document.getElementById("letter").value.trim();
+  const details={letter,wordCount:letter?letter.split(/\s+/).length:0,items:answers,fullscreenExits,tabExits,eventLog,checklist:[...document.querySelectorAll('.checklist input[type="checkbox"]')].map(x=>x.checked)};
+  button.disabled=true;
+  status.className="";
+  status.textContent="Die Arbeit wird gesendet …";
+  try{
+    await DSDTraining.submit({exercise:"Wortstellung und Leserbrief – Meine Schule B1",score:correct,total:answers.length,answers:details,duration_seconds:Math.round((Date.now()-exerciseStartedAt)/1000)});
+    status.className="status-ok";
+    status.textContent="Die Arbeit wurde gesendet. Vielen Dank!";
+    button.textContent="✓ Arbeit gesendet";
+  }catch(error){
+    status.className="status-error";
+    status.textContent="Die Arbeit konnte nicht gesendet werden. Prüfe die Internetverbindung und versuche es erneut.";
+    button.disabled=false;
+  }
+}
+function resetAll(){
+  document.querySelectorAll('input[type="text"],textarea').forEach(x=>x.value="");
+  document.querySelectorAll("select").forEach(x=>x.selectedIndex=0);
+  document.querySelectorAll('input[type="checkbox"]').forEach(x=>x.checked=false);
+  document.querySelectorAll(".correct,.wrong").forEach(x=>x.classList.remove("correct","wrong"));
+  document.querySelectorAll(".feedback").forEach(x=>x.textContent="");
+  document.getElementById("score").textContent="";document.getElementById("sendStatus").textContent="";
+  const sendButton=document.getElementById("sendButton");sendButton.disabled=false;sendButton.textContent="Arbeit senden";
+  countWords();scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+</body>
+</html>
