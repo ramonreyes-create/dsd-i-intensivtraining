@@ -1,0 +1,1 @@
+Activates the first automatic Cloudflare deployment after connecting the repository.
