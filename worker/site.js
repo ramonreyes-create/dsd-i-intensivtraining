@@ -380,6 +380,7 @@ async function handleRequest(request,env){
     await env.DB.prepare("DELETE FROM material_roles WHERE material_id=?").bind(id).run();
     return json({ok:true});
   }
+  if(request.method==="GET"&&env.ASSETS)return env.ASSETS.fetch(request);
   return text("Nicht gefunden.",404);
 }
 
