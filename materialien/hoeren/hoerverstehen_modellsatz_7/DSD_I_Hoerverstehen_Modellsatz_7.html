@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="de" class="notranslate" translate="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="google" content="notranslate">
+  <meta http-equiv="Content-Language" content="de">
+  <title>DSD I - Hörverstehen - Modellsatz 7</title>
+  <style>
+    :root{--navy:#173759;--blue:#2e6db0;--light:#edf4fb;--line:#ccd7e3;--ink:#172235;--green:#16734b;--red:#b32e35;--gold:#f4b241}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#eaf0f6;color:var(--ink);font:16px/1.5 Arial,sans-serif}
+    button,input,select{font:inherit}.top{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:14px 24px;background:var(--navy);color:#fff;box-shadow:0 3px 15px #102a4433}.top h1{margin:0;font-size:1.2rem}.progress{font-weight:800}.shell{width:min(1120px,calc(100% - 28px));margin:24px auto 60px}.intro,.part{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 7px 24px #17375912}.intro{padding:24px}.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.intro input{width:100%;padding:12px;border:1.5px solid #b4c4d5;border-radius:10px}.notice{margin-top:16px;padding:13px 15px;background:#fff7e4;border-left:5px solid var(--gold);border-radius:8px}.nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.nav a{text-decoration:none;color:var(--navy);font-weight:800;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 13px}.part{padding:24px;margin:18px 0;scroll-margin-top:86px}.part-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;border-bottom:2px solid var(--light);padding-bottom:15px}.part h2{margin:0;color:var(--navy)}.muted{color:#647386}.audio-box{margin:17px 0;padding:16px;background:var(--light);border-radius:12px}.audio-line{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.play{border:0;border-radius:9px;padding:10px 15px;background:var(--blue);color:#fff;font-weight:800;cursor:pointer}.play:disabled{background:#8796a6;cursor:not-allowed}.audio-status{font-weight:700}.bar{height:8px;margin-top:12px;background:#d2dce8;border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;width:0;background:var(--blue)}.sheet-image{display:block;width:100%;max-height:980px;object-fit:contain;margin:15px auto;border:1px solid var(--line);border-radius:10px;background:#fff}.questions{display:grid;gap:12px;margin-top:18px}.question{padding:15px;border:1px solid var(--line);border-radius:12px;background:#fbfcfe}.question b{display:block;margin-bottom:9px}.choices{display:grid;gap:7px}.choices label{display:flex;gap:9px;align-items:flex-start;padding:7px 9px;border-radius:8px}.choices label:hover{background:var(--light)}input[type=radio]{margin-top:4px;transform:scale(1.15)}.compact-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.compact-grid .question{text-align:center}.compact-grid .choices{grid-template-columns:repeat(3,1fr)}.compact-grid .choices label{justify-content:center}.family-list{columns:2;column-gap:35px;padding-left:0;list-style:none}.family-list li{break-inside:avoid;margin:7px 0}.answer-select{width:130px;padding:9px;border:1.5px solid #b4c4d5;border-radius:9px}.submit-panel{position:sticky;bottom:12px;z-index:15;display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:22px;padding:15px 18px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 28px #17375928}.submit{border:0;border-radius:10px;padding:12px 18px;background:var(--green);color:#fff;font-weight:800;cursor:pointer}.status{font-weight:800}.ok{color:var(--green)}.error{color:var(--red)}
+    .start-screen,.warning-screen{position:fixed;inset:0;z-index:100;background:#102a44f2;display:grid;place-items:center;padding:22px}.start-card,.warning-card{width:min(610px,100%);background:#fff;border-radius:18px;padding:30px;box-shadow:0 20px 70px #0006}.start-card h2,.warning-card h2{margin-top:0;color:var(--navy)}.start-card input{width:100%;padding:12px;margin:6px 0 12px;border:1.5px solid #b4c4d5;border-radius:10px}.start-card button,.warning-card button{width:100%;border:0;border-radius:10px;padding:13px;background:var(--gold);font-weight:900;cursor:pointer}.warning-screen{display:none}.warning-card{border-top:8px solid var(--red)}
+    @media(max-width:760px){.top{align-items:flex-start}.intro-grid,.compact-grid{grid-template-columns:1fr}.compact-grid .choices{grid-template-columns:repeat(3,1fr)}.family-list{columns:1}.part{padding:18px}.submit-panel{align-items:flex-start;flex-direction:column}.sheet-image{max-height:none}}
+    @media print{.top,.nav,.audio-box,.submit-panel,.start-screen,.warning-screen{display:none!important}.shell{width:100%;margin:0}.part,.intro{box-shadow:none;break-inside:avoid}}
+  </style>
+</head>
+<body>
+  <div class="start-screen" id="startScreen">
+    <div class="start-card">
+      <h2>DSD I - Hörverstehen</h2>
+      <p>Trage deinen Namen und deine Klasse ein. Danach startet die Prüfung im Vollbildmodus.</p>
+      <label for="studentName"><b>Vor- und Nachname</b></label>
+      <input id="studentName" autocomplete="name" maxlength="120">
+      <label for="studentCourse"><b>Klasse / Kurs</b></label>
+      <input id="studentCourse" maxlength="80">
+      <p class="muted">Jeder Audioteil kann nur einmal gestartet werden. Die in der Aufnahme vorgesehenen Wiederholungen sind bereits enthalten.</p>
+      <button type="button" onclick="beginExam()">Prüfung im Vollbild starten</button>
+      <p class="status error" id="startError"></p>
+    </div>
+  </div>
+
+  <div class="warning-screen" id="warningScreen">
+    <div class="warning-card">
+      <h2>Achtung: Vollbildmodus verlassen</h2>
+      <p>Du hast den Vollbildmodus verlassen. Dieser Vorgang wird im Prüfungsprotokoll gespeichert.</p>
+      <button type="button" onclick="returnFullscreen()">Zum Vollbild zurückkehren</button>
+    </div>
+  </div>
+
+  <header class="top"><h1>DSD I · Hörverstehen · Modellsatz 7</h1><span class="progress" id="answerProgress">0 / 24 beantwortet</span></header>
+  <main class="shell">
+    <section class="intro">
+      <h2>Prüfungsinformationen</h2>
+      <div class="intro-grid"><div><b>Name:</b> <span id="nameDisplay">-</span></div><div><b>Klasse / Kurs:</b> <span id="courseDisplay">-</span></div></div>
+      <div class="notice"><b>Arbeitsanweisung:</b> Bearbeite alle fünf Teile. Wähle deine Antworten während der Pausen im Audio. Nach Teil 5 kontrollierst du deine Antworten und gibst die Arbeit ab.</div>
+    </section>
+    <nav class="nav" aria-label="Prüfungsteile"><a href="#teil1">Teil 1</a><a href="#teil2">Teil 2</a><a href="#teil3">Teil 3</a><a href="#teil4">Teil 4</a><a href="#teil5">Teil 5</a></nav>
+
+    <section class="part" id="teil1">
+      <div class="part-head"><div><h2>Teil 1 · Alltagsszenen</h2><p>Welches Bild passt? Wähle A, B oder C.</p></div><strong>Aufgaben 1-5</strong></div>
+      <div class="audio-box" data-track="1"><div class="audio-line"><button class="play" type="button" onclick="startAudio(1)">▶ Teil 1 starten</button><span class="audio-status">Noch nicht gestartet</span></div><div class="bar"><span></span></div><audio preload="metadata" src="assets/teil-1.mp3"></audio></div>
+      <img class="sheet-image" src="assets/teil-1-szenen-1-2.png" alt="Szenen 1 und 2 mit den Bildern A, B und C">
+      <img class="sheet-image" src="assets/teil-1-szenen-3-5.png" alt="Szenen 3 bis 5 mit den Bildern A, B und C">
+      <div class="questions compact-grid" id="questions1"></div>
+    </section>
+
+    <section class="part" id="teil2">
+      <div class="part-head"><div><h2>Teil 2 · Nachrichten auf dem Anrufbeantworter</h2><p>Wähle bei jeder Aufgabe A, B oder C.</p></div><strong>Aufgaben 6-9</strong></div>
+      <div class="audio-box" data-track="2"><div class="audio-line"><button class="play" type="button" onclick="startAudio(2)">▶ Teil 2 starten</button><span class="audio-status">Noch nicht gestartet</span></div><div class="bar"><span></span></div><audio preload="metadata" src="assets/teil-2.mp3"></audio></div>
+      <div class="questions" id="questions2"></div>
+    </section>
+
+    <section class="part" id="teil3">
+      <div class="part-head"><div><h2>Teil 3 · Interview mit der Fußballspielerin Alexandra Müller</h2><p>Entscheide: richtig oder falsch?</p></div><strong>Aufgaben 10-14</strong></div>
+      <div class="audio-box" data-track="3"><div class="audio-line"><button class="play" type="button" onclick="startAudio(3)">▶ Teil 3 starten</button><span class="audio-status">Noch nicht gestartet</span></div><div class="bar"><span></span></div><audio preload="metadata" src="assets/teil-3.mp3"></audio></div>
+      <div class="questions" id="questions3"></div>
+    </section>
+
+    <section class="part" id="teil4">
+      <div class="part-head"><div><h2>Teil 4 · Ich bin der König der Tiere</h2><p>Wähle bei jeder Aufgabe A, B oder C.</p></div><strong>Aufgaben 15-20</strong></div>
+      <div class="audio-box" data-track="4"><div class="audio-line"><button class="play" type="button" onclick="startAudio(4)">▶ Teil 4 starten</button><span class="audio-status">Noch nicht gestartet</span></div><div class="bar"><span></span></div><audio preload="metadata" src="assets/teil-4.mp3"></audio></div>
+      <div class="questions" id="questions4"></div>
+    </section>
+
+    <section class="part" id="teil5">
+      <div class="part-head"><div><h2>Teil 5 · Was ich an meiner Familie gut finde</h2><p>Ordne jeder Aussage den richtigen Buchstaben A-H zu. Vier Buchstaben bleiben übrig.</p></div><strong>Aufgaben 21-24</strong></div>
+      <div class="audio-box" data-track="5"><div class="audio-line"><button class="play" type="button" onclick="startAudio(5)">▶ Teil 5 starten</button><span class="audio-status">Noch nicht gestartet</span></div><div class="bar"><span></span></div><audio preload="metadata" src="assets/teil-5.mp3"></audio></div>
+      <ul class="family-list"><li><b>A</b> Gemeinsam essen</li><li><b>B</b> Mit der Familie Sport treiben</li><li><b>C</b> Gemeinsam kreativ sein</li><li><b>D</b> Gemeinsam etwas unternehmen</li><li><b>E</b> Geburtstage feiern</li><li><b>F</b> Mit der Familie planen</li><li><b>G</b> Vorbild sein</li><li><b>H</b> Gemeinsam arbeiten</li></ul>
+      <div class="questions" id="questions5"></div>
+    </section>
+
+    <div class="submit-panel"><div><b>Kontrolliere deine 24 Antworten.</b><div class="status" id="submitStatus"></div></div><button class="submit" type="button" onclick="submitExam()">Arbeit abgeben</button></div>
+  </main>
+
+  <script src="https://dsd-i-intensivtraining.ramon-reyes.workers.dev/dsd-connector.js"></script>
+  <script>
+    const abc=['A','B','C'];
+    const q2=[
+      [6,'Die Mutter möchte, dass Peter',['sich um ein Geschenk für seine Oma kümmert.','einen Strauß Tulpen für seine Oma kauft.','seiner Oma zum Geburtstag gratuliert.']],
+      [7,'Herr Meyer',['kann sein Auto aus der Werkstatt abholen.','muss neue Winterreifen bestellen.','soll die Werkstatt noch einmal anrufen.']],
+      [8,'Frau Diestel',['fragt nach ihren Blutergebnissen.','wird am Freitag noch einmal anrufen.','braucht einen neuen Termin.']],
+      [9,'Sabrina',['hat morgen keinen Tanzkurs.','ist krank und bleibt morgen zu Hause.','bringt Anna Ballettschuhe mit.']]
+    ];
+    const q3=[
+      [10,'Alexandra ist die erfahrenste Spielerin in ihrer Mannschaft.'],
+      [11,'Neben ihrer Fußballkarriere studiert Alexandra Sportmedizin.'],
+      [12,'Alexandra wünscht sich, dass die Frauen im Fußball besser bezahlt werden.'],
+      [13,'Alexandra spricht von der langen Tradition des Frauenfußballs.'],
+      [14,'Alexandra ist traurig, dass sie das Angebot des französischen Vereins abgelehnt hat.']
+    ];
+    const q4=[
+      [15,'Um die Rolle als „Leo“ zu bekommen, musste Louis',['sich auf eine Zeitungsanzeige bewerben.','besser als die anderen Jungen sein.','dem Produzenten etwas vorspielen.']],
+      [16,'Seit Louis Auftritte hat,',['hat er keine Zeit mehr für Hobbys.','trainiert er viermal in der Woche.','sieht er seine neuen Freunde seltener.']],
+      [17,'Wenn Louis auf der Bühne steht,',['vertraut er den anderen Kollegen.','schaut er gern ins Publikum.','ist er immer sehr aufgeregt.']],
+      [18,'Louis kann nicht jeden Tag auf der Bühne spielen, weil',['so viel Arbeit für Jugendliche nicht erlaubt ist.','die anderen fünf Jungen das auch gerne machen.','es nur zweimal die Woche eine Aufführung gibt.']],
+      [19,'Louis freut sich immer, wenn',['die Schminke wieder entfernt werden kann.','die Zuschauer ihm am Ende gratulieren.','er nach der Arbeit endlich ins Bett kann.']],
+      [20,'Wegen der Musical-Arbeit ist Louis',['zu Hause manchmal wütend geworden.','in der Schule selbstbewusster geworden.','bei seinen Mitschülern beliebter geworden.']]
+    ];
+    const key={1:'A',2:'C',3:'A',4:'B',5:'C',6:'B',7:'A',8:'C',9:'A',10:'falsch',11:'falsch',12:'richtig',13:'falsch',14:'falsch',15:'A',16:'C',17:'A',18:'A',19:'A',20:'B',21:'F',22:'G',23:'A',24:'D'};
+    const exam={startedAt:0,fullscreenExits:0,audioStarts:{},submitted:false};
+    const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    function radioQuestion(n,title,options,values=abc){return `<div class="question"><b>${n}. ${esc(title)}</b><div class="choices">${options.map((o,i)=>`<label><input type="radio" name="q${n}" value="${esc(values[i])}"><span><b>${esc(values[i])}</b> ${esc(o)}</span></label>`).join('')}</div></div>`}
+    function render(){document.getElementById('questions1').innerHTML=[1,2,3,4,5].map(n=>radioQuestion(n,'Szene '+n,abc,abc)).join('');document.getElementById('questions2').innerHTML=q2.map(q=>radioQuestion(...q)).join('');document.getElementById('questions3').innerHTML=q3.map(q=>radioQuestion(q[0],q[1],['richtig','falsch'],['richtig','falsch'])).join('');document.getElementById('questions4').innerHTML=q4.map(q=>radioQuestion(...q)).join('');document.getElementById('questions5').innerHTML=[21,22,23,24].map(n=>`<div class="question"><b>${n}. Aussage ${n}</b><select class="answer-select" name="q${n}"><option value="">Bitte wählen</option>${'ABCDEFGH'.split('').map(x=>`<option>${x}</option>`).join('')}</select></div>`).join('');document.querySelectorAll('input,select').forEach(el=>el.addEventListener('change',saveAndProgress));restoreAnswers();updateProgress()}
+    function currentAnswers(){const out={};for(let n=1;n<=24;n++){const radio=document.querySelector(`input[name=q${n}]:checked`),sel=document.querySelector(`select[name=q${n}]`);out[n]=radio?.value||sel?.value||''}return out}
+    function saveAndProgress(){localStorage.setItem('hv7-answers',JSON.stringify(currentAnswers()));updateProgress()}
+    function restoreAnswers(){try{const a=JSON.parse(localStorage.getItem('hv7-answers')||'{}');Object.entries(a).forEach(([n,v])=>{const radio=document.querySelector(`input[name=q${n}][value="${v}"]`),sel=document.querySelector(`select[name=q${n}]`);if(radio)radio.checked=true;if(sel)sel.value=v})}catch{}}
+    function updateProgress(){const count=Object.values(currentAnswers()).filter(Boolean).length;document.getElementById('answerProgress').textContent=count+' / 24 beantwortet'}
+    async function beginExam(){const name=document.getElementById('studentName').value.trim(),course=document.getElementById('studentCourse').value.trim(),err=document.getElementById('startError');if(!name||!course){err.textContent='Bitte Name und Klasse vollständig eintragen.';return}localStorage.setItem('hv7-student',JSON.stringify({name,course}));document.getElementById('nameDisplay').textContent=name;document.getElementById('courseDisplay').textContent=course;exam.startedAt=Date.now();try{await document.documentElement.requestFullscreen()}catch{}document.getElementById('startScreen').style.display='none'}
+    async function returnFullscreen(){try{await document.documentElement.requestFullscreen()}catch{}document.getElementById('warningScreen').style.display='none'}
+    function startAudio(n){if(exam.audioStarts[n])return;const box=document.querySelector(`[data-track="${n}"]`),audio=box.querySelector('audio'),button=box.querySelector('button'),status=box.querySelector('.audio-status'),bar=box.querySelector('.bar span');exam.audioStarts[n]=Date.now();button.disabled=true;button.textContent='Audio läuft';status.textContent='Wiedergabe läuft - bitte aufmerksam zuhören';audio.addEventListener('timeupdate',()=>{bar.style.width=(audio.duration?audio.currentTime/audio.duration*100:0)+'%';status.textContent=formatTime(audio.currentTime)+' / '+formatTime(audio.duration)});audio.addEventListener('ended',()=>{status.textContent='Teil '+n+' beendet';bar.style.width='100%'});audio.play().catch(()=>{exam.audioStarts[n]=0;button.disabled=false;button.textContent='▶ Teil '+n+' starten';status.textContent='Audio konnte nicht gestartet werden.'})}
+    function formatTime(s){if(!Number.isFinite(s))return '--:--';return Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0')}
+    async function submitExam(){const status=document.getElementById('submitStatus'),answers=currentAnswers(),missing=Object.entries(answers).filter(([,v])=>!v).map(([n])=>n);if(missing.length){status.textContent='Es fehlen die Aufgaben: '+missing.join(', ');status.className='status error';return}if(exam.submitted)return;let score=0;for(let n=1;n<=24;n++)if(answers[n]===key[n])score++;const student=JSON.parse(localStorage.getItem('hv7-student')||'{}');status.textContent='Die Arbeit wird gespeichert …';status.className='status';try{if(!window.DSDTraining?.connected)throw new Error('Bitte öffne die Aufgabe über das DSD-I-Portal.');await DSDTraining.submit({exercise:'DSD I Hörverstehen - Modellsatz 7',score,total:24,answers:{responses:answers,student,audioStarts:exam.audioStarts,fullscreenExits:exam.fullscreenExits},duration_seconds:exam.startedAt?Math.round((Date.now()-exam.startedAt)/1000):0});exam.submitted=true;localStorage.removeItem('hv7-answers');status.textContent='✓ Arbeit gespeichert: '+score+' von 24 Punkten.';status.className='status ok';document.querySelector('.submit').disabled=true}catch(e){status.textContent=e.message||'Die Arbeit konnte nicht gespeichert werden.';status.className='status error'}}
+    document.addEventListener('fullscreenchange',()=>{if(exam.startedAt&&!exam.submitted&&!document.fullscreenElement&&document.getElementById('startScreen').style.display==='none'){exam.fullscreenExits++;document.getElementById('warningScreen').style.display='grid'}});
+    document.addEventListener('visibilitychange',()=>{if(exam.startedAt&&!exam.submitted&&document.hidden)exam.fullscreenExits++});
+    window.addEventListener('beforeunload',e=>{if(exam.startedAt&&!exam.submitted){e.preventDefault();e.returnValue=''}});
+    try{const s=JSON.parse(localStorage.getItem('hv7-student')||'{}');document.getElementById('studentName').value=s.name||'';document.getElementById('studentCourse').value=s.course||''}catch{}
+    render();
+  </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/wrangler.json",
+  "name": "dsd-i-intensivtraining",
+  "main": "worker/site.js",
+  "compatibility_date": "2026-07-31",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "dsd-i-database",
+      "database_id": "5d54d408-d7c3-4d32-aa59-f55452367201"
+    }
+  ]
+}

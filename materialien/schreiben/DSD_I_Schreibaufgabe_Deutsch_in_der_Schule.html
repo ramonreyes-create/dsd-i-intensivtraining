@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DSD I Schreibaufgabe – Deutsch in der Schule</title>
+  <style>
+    :root{--navy:#173759;--blue:#2e6db0;--light:#edf4fb;--line:#ccd7e3;--ink:#172235;--green:#16734b;--red:#b32e35}
+    *{box-sizing:border-box}body{margin:0;background:#eaf0f6;color:var(--ink);font:15px/1.48 Arial,sans-serif}.top{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:15px 25px;background:var(--navy);color:#fff}.top h1{margin:0;font-size:1.25rem}.timer{display:flex;align-items:center;gap:10px}.clock{font-size:1.55rem;font-weight:800;font-variant-numeric:tabular-nums}button{border:0;border-radius:9px;padding:9px 13px;background:#f4b241;color:#172235;font-weight:800;cursor:pointer}button.secondary{background:#dbe8f4}.workspace{display:grid;grid-template-columns:minmax(430px,48%) 1fr;min-height:calc(100vh - 70px)}.source,.writing{padding:25px;overflow:auto}.source{background:#fff;border-right:2px solid var(--line)}.writing{display:flex;flex-direction:column;background:#f7f9fc}.intro{padding:12px 15px;background:var(--light);border-left:5px solid var(--blue);border-radius:9px}.opinions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}.opinion{position:relative;padding:15px;border:1px solid var(--line);border-radius:15px;background:#fff}.opinion b{display:block;color:var(--blue);margin-bottom:5px}.task{margin-top:18px;padding-top:15px;border-top:2px solid var(--line)}.task li{margin:9px 0}.writing h2{margin:0 0 8px;color:var(--navy)}textarea{width:100%;flex:1;min-height:510px;padding:20px;border:1.5px solid #aebfd1;border-radius:14px;background:#fff;font:17px/1.7 Georgia,serif;resize:none}.writing-meta{display:flex;justify-content:space-between;gap:15px;margin:8px 2px;color:#637285}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:7px 18px;margin:14px 0;padding:14px;background:#fff;border:1px solid var(--line);border-radius:12px}.actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.status{font-weight:700}.ok{color:var(--green)}.error{color:var(--red)}@media(max-width:900px){.workspace{grid-template-columns:1fr}.source{border-right:0;border-bottom:2px solid var(--line)}.opinions{grid-template-columns:1fr}textarea{min-height:520px;resize:vertical}}@media print{.top,.checklist,.actions{display:none}.workspace{display:block}.source,.writing{padding:10mm;border:0}.opinions{grid-template-columns:1fr 1fr}textarea{border:1px solid #555;min-height:150mm}}
+  </style>
+</head>
+<body>
+  <header class="top"><h1>DSD I · Schriftliche Kommunikation</h1><div class="timer"><span>Verbleibende Zeit:</span><span class="clock" id="clock">75:00</span><button onclick="startTimer()">Start</button><button class="secondary" onclick="resetTimer()">Neu</button></div></header>
+  <main class="workspace">
+    <section class="source">
+      <h2>Deutsch in der Schule</h2>
+      <p class="intro">In einem Internetforum gibt es eine Diskussion zum Thema <b>„Deutsch in der Schule“</b>. Du findest hier dazu folgende Aussagen:</p>
+      <div class="opinions">
+        <article class="opinion"><b>Lena</b>Deutsch ist eines meiner Lieblingsfächer. Wir lesen interessante Texte und diskutieren über aktuelle Themen. Besonders gern schreibe ich Geschichten, weil ich dabei kreativ sein kann. Allerdings finde ich manche Grammatikregeln ziemlich kompliziert.</article>
+        <article class="opinion"><b>Tom</b>Meiner Meinung nach haben wir zu viele Deutschstunden. Wir müssen oft lange Texte lesen und interpretieren. Das finde ich manchmal langweilig. Ich würde lieber mehr praktische Aufgaben machen, zum Beispiel Präsentationen oder Interviews.</article>
+        <article class="opinion"><b>Sofia</b>Gute Deutschkenntnisse sind für die Zukunft sehr wichtig. Man braucht sie nicht nur in der Schule, sondern auch später im Studium und im Beruf. Deshalb versuche ich, meinen Wortschatz zu erweitern und möglichst fehlerfrei zu schreiben.</article>
+        <article class="opinion"><b>Emil</b>Im Deutschunterricht sprechen meistens nur wenige Schülerinnen und Schüler. Viele haben Angst, Fehler zu machen. Ich finde, wir sollten häufiger in Gruppen arbeiten und mehr miteinander sprechen. So könnte der Unterricht interessanter und abwechslungsreicher werden.</article>
+      </div>
+      <div class="task">
+        <h3>Schreibaufgabe</h3><p>Schreibe einen <b>Beitrag für die Schülerzeitung</b> deiner Schule.</p><p>Bearbeite in deinem Beitrag die folgenden drei Punkte:</p>
+        <ul><li>Gib alle vier Aussagen aus dem Internetforum <b>mit eigenen Worten</b> wieder.</li><li>Berichte <b>ausführlich</b> über deine Erfahrungen mit Deutsch in der Schule.</li><li>Sollte der Deutschunterricht verändert werden? Begründe deine Meinung <b>ausführlich</b>.</li></ul>
+        <p><b>Du hast insgesamt 75 Minuten Zeit.</b><br>Du brauchst die Wörter nicht zu zählen.</p>
+      </div>
+    </section>
+    <section class="writing">
+      <h2>Mein Beitrag für die Schülerzeitung</h2><p>Schreibe hier deinen vollständigen Text.</p>
+      <textarea id="letter" spellcheck="true" placeholder="Titel: …&#10;&#10;In unserer Schülerzeitung möchte ich heute über das Thema … schreiben.&#10;&#10;…"></textarea>
+      <div class="writing-meta"><span id="wordCount">0 Wörter</span><span>Automatisch im Browser zwischengespeichert</span></div>
+      <div class="checklist"><label><input type="checkbox"> Alle vier Meinungen wiedergegeben</label><label><input type="checkbox"> Eigene Erfahrungen ausführlich beschrieben</label><label><input type="checkbox"> Eigene Meinung klar begründet</label><label><input type="checkbox"> Einleitung und Schluss vorhanden</label><label><input type="checkbox"> Absätze und Konnektoren verwendet</label><label><input type="checkbox"> Text sprachlich kontrolliert</label></div>
+      <div class="actions"><button onclick="submitWork()">Arbeit abgeben</button><button class="secondary" onclick="window.print()">Drucken / PDF</button><span class="status" id="status"></span></div>
+    </section>
+  </main>
+  <script src="https://dsd-i-intensivtraining.ramon-reyes.workers.dev/dsd-connector.js"></script>
+  <script>
+    const text=document.getElementById('letter'),status=document.getElementById('status');let remaining=4500,timer=null,startedAt=0;
+    function words(){const n=text.value.trim()?text.value.trim().split(/\s+/).length:0;document.getElementById('wordCount').textContent=n+' Wörter'}
+    text.value=localStorage.getItem('dsd-deutsch-schule-text')||'';words();text.addEventListener('input',()=>{words();localStorage.setItem('dsd-deutsch-schule-text',text.value)});
+    function draw(){const m=Math.floor(remaining/60),s=remaining%60;document.getElementById('clock').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')}
+    function startTimer(){if(timer)return;if(!startedAt)startedAt=Date.now();timer=setInterval(()=>{remaining--;draw();if(remaining<=0){clearInterval(timer);timer=null;status.textContent='Die Bearbeitungszeit ist abgelaufen.';status.className='status error'}},1000)}
+    function resetTimer(){clearInterval(timer);timer=null;remaining=4500;startedAt=0;draw()}
+    async function submitWork(){const letter=text.value.trim(),checks=[...document.querySelectorAll('.checklist input')].map(x=>x.checked);if(letter.length<80){status.textContent='Bitte schreibe zuerst einen vollständigen Beitrag.';status.className='status error';return}if(!window.DSDTraining?.connected){status.textContent='Bitte öffne die Aufgabe über das DSD-I-Portal.';status.className='status error';return}status.textContent='Die Arbeit wird gespeichert …';status.className='status';try{await DSDTraining.submit({exercise:'DSD I Schreibaufgabe – Deutsch in der Schule',score:checks.filter(Boolean).length,total:6,answers:{letter,wordCount:letter.split(/\s+/).length,checklist:checks},duration_seconds:startedAt?Math.round((Date.now()-startedAt)/1000):0});status.textContent='✓ Die Arbeit wurde gespeichert.';status.className='status ok';localStorage.removeItem('dsd-deutsch-schule-text')}catch(e){status.textContent=e.message||'Die Arbeit konnte nicht gespeichert werden.';status.className='status error'}}
+    draw();
+  </script>
+</body>
+</html>
