@@ -63,7 +63,7 @@ const HTML = String.raw`<!doctype html>
         <div class="eyebrow">10. Klasse · Prüfungsvorbereitung 2026</div>
         <h1>Jeden Tag ein Schritt näher zum DSD I.</h1>
         <p>Kurze, gezielte Übungen für Lesen, Hören, Schreiben und Sprechen – mit echtem Prüfungsfokus und klarer Fortschrittsanzeige.</p>
-        <div class="cta"><button class="btn light" onclick="startToday()">Heute trainieren</button><button class="ghost" onclick="go('simulationen')">Zu den Simulationen →</button></div>
+        <div class="cta"><button class="btn light" onclick="startToday()">Heute trainieren</button><button class="ghost" onclick="go('simulationen')">Zu den Simulationen →</button><a class="btn" href="https://chatgpt.com/g/g-6a778ddc85b48191b669fac4847159ff-dsd-i-schreibtrainer" target="_blank" rel="noopener noreferrer" style="text-decoration:none" aria-label="Mit GPT Schreibtrainer arbeiten">✍️ Mit GPT arbeiten</a></div>
       </div>
       <aside class="count-card">
         <h2>Dein Prüfungs-Countdown</h2>
@@ -390,3 +390,4 @@ export default {
     catch(error){return json({error:"Serverfehler",detail:String(error?.message||error)},500)}
   }
 };
+
