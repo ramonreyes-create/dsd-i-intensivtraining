@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liederfieber · Arbeitsblatt B1</title>
+  <meta name="description" content="Interaktive B1-Arbeitsblatt zu einer Liederfieber-Präsentation: Leseverstehen und Grammatik.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23100f18'/%3E%3Cpath d='M40 12v31.5a10 10 0 1 1-5-8.7V20l17-4v22.5a10 10 0 1 1-5-8.7V10z' fill='%23ffcb45'/%3E%3C/svg%3E">
+  <style>
+    :root{--ink:#171522;--paper:#fffdf8;--cream:#f4efe5;--accent:#d93258;--gold:#f4b942;--blue:#2458d3;--ok:#16794c;--bad:#b6283f;--muted:#676270;--line:#ddd5c9;--shadow:0 18px 50px rgba(33,24,42,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--cream);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.55}
+    button,input{font:inherit}.topbar{position:sticky;top:0;z-index:20;background:rgba(23,21,34,.97);color:white;box-shadow:0 3px 18px rgba(0,0,0,.18)}
+    .topbar-inner{max-width:1180px;margin:auto;min-height:72px;padding:10px 24px;display:flex;align-items:center;gap:22px}.brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.02em}.brand-mark{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--gold);color:var(--ink);font-size:1.4rem}.status{margin-left:auto;display:flex;align-items:center;gap:18px}.status small{display:block;color:#c8c4d0;font-size:.72rem;text-transform:uppercase;letter-spacing:.09em}.status strong{font-variant-numeric:tabular-nums}.timer{padding:8px 14px;border:1px solid #514c5e;border-radius:12px}.timer.urgent{background:#6c1730;border-color:#ff7295}.progress-wrap{width:160px}.track{height:7px;background:#3c3847;border-radius:99px;overflow:hidden}.fill{height:100%;width:0;background:var(--gold);transition:width .3s}.fullscreen-btn{border:1px solid #5d5868;background:transparent;color:white;border-radius:10px;padding:8px 12px;cursor:pointer}
+    main{max-width:1180px;margin:auto;padding:38px 24px 80px}.hero{display:grid;grid-template-columns:1.4fr .6fr;gap:24px;align-items:stretch;margin-bottom:24px}.hero-copy{background:var(--ink);color:white;border-radius:28px;padding:38px;position:relative;overflow:hidden;box-shadow:var(--shadow)}.hero-copy:after{content:"♪";position:absolute;right:24px;bottom:-45px;font-size:13rem;color:rgba(255,203,69,.12);transform:rotate(-8deg)}.eyebrow{color:var(--gold);font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}h1{font-family:Georgia,serif;font-size:clamp(2.6rem,6vw,5.6rem);line-height:.9;letter-spacing:-.055em;margin:18px 0 16px}.lead{max-width:650px;color:#dedbe5;font-size:1.08rem}.hero-card{background:var(--gold);border-radius:28px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow)}.hero-card h2{font-size:1.25rem;margin:0 0 12px}.facts{display:grid;gap:10px;margin-top:18px}.fact{display:flex;justify-content:space-between;border-top:1px solid rgba(23,21,34,.22);padding-top:10px}.fact strong{font-size:1.2rem}.intro{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)}.student-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}.field label{display:block;font-weight:700;margin-bottom:6px}.field input{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:white}.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}.rule{border:1px solid var(--line);border-radius:14px;padding:15px;background:#faf7f0}.rule b{display:block;color:var(--accent);font-size:1.3rem}.primary{border:0;border-radius:12px;background:var(--accent);color:white;font-weight:800;padding:14px 20px;cursor:pointer;box-shadow:0 7px 0 #8e1f3d}.primary:hover{transform:translateY(-1px)}.primary:active{transform:translateY(4px);box-shadow:0 3px 0 #8e1f3d}.primary:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+    #activity[hidden],#result[hidden]{display:none}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:44px 0 14px}.section-head h2{font-family:Georgia,serif;font-size:2.2rem;margin:0;letter-spacing:-.03em}.section-head span{color:var(--muted)}.reading{background:var(--paper);border-radius:22px;border-left:8px solid var(--blue);padding:30px 34px;box-shadow:var(--shadow);columns:2;column-gap:38px}.reading h3{column-span:all;margin-top:0;font-family:Georgia,serif;font-size:1.6rem}.reading p{margin-top:0;break-inside:avoid}.questions{display:grid;gap:14px}.question{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;transition:border-color .2s,box-shadow .2s}.question.correct{border-color:var(--ok);box-shadow:0 0 0 2px rgba(22,121,76,.13)}.question.wrong-final{border-color:var(--bad)}.qtop{display:flex;gap:14px;align-items:flex-start}.qnum{flex:0 0 34px;height:34px;display:grid;place-items:center;border-radius:10px;background:var(--ink);color:white;font-weight:800}.qtext{font-weight:750;padding-top:4px}.options{display:grid;gap:8px;margin:16px 0}.option{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:11px;padding:11px 12px;cursor:pointer;background:white}.option:hover{border-color:#aaa1b4}.option:has(input:checked){border-color:var(--blue);background:#eff3ff}.option input{margin-top:5px;accent-color:var(--blue)}.qfooter{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.check{border:0;background:var(--ink);color:white;border-radius:9px;padding:9px 14px;font-weight:750;cursor:pointer}.check:disabled{opacity:.5;cursor:not-allowed}.attempts{font-size:.86rem;color:var(--muted)}.feedback{font-weight:700;font-size:.92rem}.feedback.ok{color:var(--ok)}.feedback.bad{color:var(--bad)}.finish-wrap{margin-top:28px;background:var(--ink);color:white;padding:24px;border-radius:20px;display:flex;align-items:center;justify-content:space-between;gap:18px}.finish-wrap p{margin:0;color:#d8d4df}.result{margin-top:30px;background:var(--paper);border:2px solid var(--ink);border-radius:26px;overflow:hidden;box-shadow:var(--shadow)}.result-band{height:13px;background:linear-gradient(90deg,var(--accent) 0 33%,var(--gold) 33% 66%,var(--blue) 66%)}.result-body{padding:34px}.grade{font-family:Georgia,serif;font-size:5rem;line-height:1;margin:6px 0;color:var(--accent)}.result-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:24px 0}.metric{background:#f5f1e9;border-radius:14px;padding:16px}.metric b{display:block;font-size:1.4rem}.scale{font-size:.9rem;color:var(--muted)}.notice{padding:12px 15px;border-radius:12px;background:#fff3ce;color:#624600;margin-top:15px}.hidden-note{position:fixed;inset:auto 20px 20px auto;background:var(--ink);color:white;padding:12px 16px;border-radius:10px;z-index:99;display:none}.hidden-note.show{display:block}@media(max-width:760px){.hero{grid-template-columns:1fr}.status{gap:8px}.progress-wrap{display:none}.brand span{display:none}.topbar-inner{padding:8px 12px}.fullscreen-btn{display:none}main{padding:20px 14px 60px}.hero-copy{padding:28px}.rules,.student-grid,.result-grid{grid-template-columns:1fr}.reading{columns:1;padding:24px}.finish-wrap{align-items:stretch;flex-direction:column}.question{padding:18px}}
+    .vocab{position:relative;display:inline-block;color:var(--blue);font-weight:750;border-bottom:2px dotted var(--blue);cursor:help;outline:none}.vocab::after{content:attr(data-es);position:absolute;left:50%;bottom:calc(100% + 8px);z-index:30;transform:translateX(-50%) translateY(4px);min-width:max-content;max-width:220px;padding:7px 10px;border-radius:8px;background:var(--ink);color:white;font:600 .82rem/1.3 Inter,ui-sans-serif,system-ui,sans-serif;box-shadow:0 7px 20px rgba(0,0,0,.22);opacity:0;visibility:hidden;pointer-events:none;transition:.16s}.vocab::before{content:"";position:absolute;left:50%;bottom:calc(100% + 3px);border:5px solid transparent;border-top-color:var(--ink);opacity:0;visibility:hidden;transition:.16s}.vocab:hover::after,.vocab:focus::after,.vocab:hover::before,.vocab:focus::before{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+    @media print{.topbar,.hero,.intro,.finish-wrap,.check{display:none!important}body{background:white}.reading,.question,.result{box-shadow:none}main{max-width:none;padding:0}.vocab{color:inherit;border:0}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">♫</span><span>Liederfieber · B1</span></div>
+      <div class="status">
+        <div class="progress-wrap"><small>Fortschritt</small><div class="track"><div class="fill" id="progressFill"></div></div></div>
+        <div class="timer" id="timerBox"><small>Restzeit</small><strong id="timer">40:00</strong></div>
+        <button class="fullscreen-btn" id="fullscreenBtn" type="button">Vollbild</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Deutsch · Niveau B1 · 40 Minuten</div>
+        <h1>Lieder&shy;fieber</h1>
+        <p class="lead">Eine interaktive Aufgabe über unseren musikalischen Vormittag: genau lesen, Zusammenhänge erkennen und Grammatik im Kontext anwenden.</p>
+      </div>
+      <aside class="hero-card">
+        <div><h2>Deine Etappen</h2><p>Arbeite ruhig und selbstständig. Du hast bei jeder Frage einen Versuch.</p></div>
+        <div class="facts"><div class="fact"><span>Leseverstehen</span><strong>8</strong></div><div class="fact"><span>Grammatik</span><strong>8</strong></div><div class="fact"><span>Wortschatz</span><strong>7</strong></div><div class="fact"><span>Lückentext</span><strong>7</strong></div><div class="fact"><span>Gesamt</span><strong>30 P.</strong></div></div>
+      </aside>
+    </section>
+
+    <section class="intro" id="intro">
+      <div class="eyebrow" style="color:var(--accent)">Vor dem Start</div>
+      <h2>Bereit für die Aufgabe?</h2>
+      <div class="student-grid">
+        <div class="field"><label for="studentName">Name</label><input id="studentName" autocomplete="off" placeholder="Vor- und Nachname"></div>
+        <div class="field"><label for="studentClass">Klasse</label><input id="studentClass" autocomplete="off" placeholder="z. B. III° A"></div>
+      </div>
+      <div class="rules">
+        <div class="rule"><b>40 Min.</b> Der Timer startet sofort.</div>
+        <div class="rule"><b>1 Versuch</b> pro Frage, danach wird sie gesperrt.</div>
+        <div class="rule"><b>50 % = 4,0</b> Deine Note erscheint direkt.</div>
+      </div>
+      <button class="primary" id="startBtn" type="button">Aufgabe starten</button>
+      <div class="notice">Prüfungsmodus: Die Aufgabe öffnet sich im Vollbild. Bleib während der Bearbeitung auf dieser Seite.</div>
+    </section>
+
+    <div id="activity" hidden>
+      <div class="section-head"><div><div class="eyebrow" style="color:var(--blue)">Teil A · 8 Punkte</div><h2>Leseverstehen</h2></div><span>Lies zuerst den ganzen Text.</span></div>
+      <article class="reading">
+        <h3>Wenn ein Lied mehr als Wörter erzählt</h3>
+        <p>Heute Vormittag <span class="vocab" data-es="se transformó" tabindex="0">verwandelte sich</span> unser Klassenraum für eine Stunde in eine kleine Bühne. Unter dem Titel <em>Liederfieber</em> präsentierten die Schülerinnen verschiedene deutschsprachige Lieder. Jede Gruppe hatte zuvor ein Lied <span class="vocab" data-es="seleccionado" tabindex="0">ausgewählt</span>, den Text untersucht und eine kurze Einführung vorbereitet. Manche Lieder waren ruhig und <span class="vocab" data-es="reflexivo / pensativo" tabindex="0">nachdenklich</span>, andere schnell und voller Energie. Gerade diese Unterschiede machten das Programm <span class="vocab" data-es="variado" tabindex="0">abwechslungsreich</span>.</p>
+        <p>Vor jedem <span class="vocab" data-es="actuación / presentación" tabindex="0">Auftritt</span> erklärte die jeweilige Gruppe, warum sie sich für ihr Lied entschieden hatte. Einige Schülerinnen interessierten sich besonders für die <span class="vocab" data-es="mensaje" tabindex="0">Botschaft</span> des Textes. Andere fanden den Rhythmus spannend oder verbanden das Lied mit einer persönlichen Erinnerung. Während der Präsentationen hörte das Publikum <span class="vocab" data-es="atentamente" tabindex="0">aufmerksam</span> zu. Es sollte nämlich nicht nur die Musik genießen, sondern auch darauf achten, welche Gefühle, Bilder und Themen durch die Lieder <span class="vocab" data-es="transmitidos" tabindex="0">vermittelt</span> wurden.</p>
+        <p>Natürlich lief nicht alles perfekt. Kurz vor einem Auftritt funktionierte die Musik zunächst nicht, und eine Sängerin vergaß für einen Moment den Anfang einer <span class="vocab" data-es="estrofa" tabindex="0">Strophe</span>. Trotzdem blieb die Stimmung positiv. Die anderen Gruppen halfen, indem sie leise den Takt klatschten. Nach wenigen Sekunden konnte die Präsentation weitergehen. Dieser Moment zeigte, dass gemeinsames Musizieren nicht nur Mut, sondern auch <span class="vocab" data-es="colaboración" tabindex="0">Zusammenarbeit</span> verlangt.</p>
+        <p>Am Ende sprachen die Schülerinnen darüber, was sie überrascht hatte. Viele bemerkten, dass man einen Liedtext anders versteht, wenn man ihn selbst singt. Wörter, die beim ersten Lesen unwichtig wirkten, bekamen durch Melodie und <span class="vocab" data-es="entonación / énfasis" tabindex="0">Betonung</span> plötzlich eine neue Bedeutung. Außerdem stellten die Schülerinnen fest, dass Fehler auf der Bühne kein Grund sind, sofort <span class="vocab" data-es="rendirse" tabindex="0">aufzugeben</span>.</p>
+        <p>Die Lehrerin zog deshalb ein positives Fazit: Bei <em>Liederfieber</em> wurden <span class="vocab" data-es="pronunciación" tabindex="0">Aussprache</span>, <span class="vocab" data-es="vocabulario" tabindex="0">Wortschatz</span> und Textverständnis gleichzeitig trainiert. Vor allem aber zeigte die Stunde, wie Sprache Menschen miteinander verbinden kann. Für die nächste Präsentation wünschten sich mehrere Schülerinnen mehr Zeit zum <span class="vocab" data-es="ensayar" tabindex="0">Proben</span> – und vielleicht sogar ein gemeinsames Schlusslied.</p>
+      </article>
+
+      <div class="questions" id="readingQuestions"></div>
+
+      <div class="section-head"><div><div class="eyebrow" style="color:var(--accent)">Teil B · 8 Punkte</div><h2>Grammatik im Kontext</h2></div><span>Wähle die passende Form.</span></div>
+      <div class="questions" id="grammarQuestions"></div>
+
+      <div class="section-head"><div><div class="eyebrow" style="color:var(--gold)">Teil C · 7 Punkte</div><h2>Wortschatz</h2></div><span>Finde die Bedeutung im Kontext.</span></div>
+      <div class="questions" id="vocabularyQuestions"></div>
+
+      <div class="section-head"><div><div class="eyebrow" style="color:var(--ok)">Teil D · 7 Punkte</div><h2>Lückentext</h2></div><span>Ergänze den zusammenhängenden Text.</span></div>
+      <article class="reading" style="columns:1;border-left-color:var(--ok);margin-bottom:14px">
+        <h3>Nach dem Auftritt</h3>
+        <p>Die folgenden sieben Sätze bilden einen Text über den Abschluss von <em>Liederfieber</em>. Wähle für jede Lücke genau ein Wort. Lies am Ende den ganzen Text noch einmal und kontrolliere, ob alles logisch zusammenpasst.</p>
+      </article>
+      <div class="questions" id="clozeQuestions"></div>
+
+      <div class="finish-wrap">
+        <div><strong>Fertig?</strong><p>Nicht beantwortete Fragen zählen als falsch. Prüfe deine Antworten vor der Abgabe.</p></div>
+        <button class="primary" id="finishBtn" type="button">Abgeben und Note sehen</button>
+      </div>
+    </div>
+
+    <section class="result" id="result" hidden aria-live="polite">
+      <div class="result-band"></div><div class="result-body"><div class="eyebrow" style="color:var(--accent)">Ergebnis</div><h2 id="resultName">Dein Ergebnis</h2><div class="grade" id="grade">—</div><div class="result-grid"><div class="metric"><span>Punkte</span><b id="points">0 / 30</b></div><div class="metric"><span>Prozent</span><b id="percent">0 %</b></div><div class="metric"><span>Bearbeitungszeit</span><b id="usedTime">00:00</b></div></div><p class="scale">Notenskala: 0 % = 1,0 · 50 % = 4,0 · 100 % = 7,0. Die Note wird linear berechnet und auf eine Dezimalstelle gerundet.</p><button class="primary" type="button" onclick="window.print()">Ergebnis drucken</button></div>
+    </section>
+  </main>
+  <div class="hidden-note" id="awayNote">Bitte bleib auf der Arbeitsblatt-Seite.</div>
+
+  <script>
+    const reading = [
+      {q:"Was hatten die Gruppen vor der Präsentation gemacht?",o:["Sie hatten nur die Melodie geübt.","Sie hatten ein Lied gewählt, den Text untersucht und eine Einführung vorbereitet.","Sie hatten neue deutsche Lieder komponiert."],a:1,h:"Suche die drei Vorbereitungen im ersten Absatz."},
+      {q:"Warum war das Programm abwechslungsreich?",o:["Weil die Lieder sehr unterschiedlich waren.","Weil jede Gruppe zweimal sang.","Weil das Publikum die Lieder auswählte."],a:0,h:"Achte auf die Beschreibung der Stimmung und des Tempos."},
+      {q:"Welche Aufgabe hatte das Publikum?",o:["Es sollte alle Liedtexte auswendig lernen.","Es sollte die Gruppen nach jedem Lied benoten.","Es sollte Musik genießen und auf Gefühle, Bilder und Themen achten."],a:2,h:"Lies das Ende des zweiten Absatzes noch einmal."},
+      {q:"Wie reagierten die anderen Gruppen auf das Problem?",o:["Sie klatschten leise den Takt.","Sie verließen den Raum.","Sie begannen ein anderes Lied."],a:0,h:"Die Hilfe war musikalisch und dauerte nur kurz."},
+      {q:"Was zeigte der schwierige Moment laut Text?",o:["Gute Technik ist wichtiger als Vorbereitung.","Gemeinsames Musizieren braucht Mut und Zusammenarbeit.","Auf der Bühne darf man keine Fehler machen."],a:1,h:"Die Antwort steht am Ende des dritten Absatzes."},
+      {q:"Was veränderte die Bedeutung mancher Wörter?",o:["Die Übersetzung ins Spanische.","Die Meinung der Lehrerin.","Melodie und Betonung."],a:2,h:"Suche im vierten Absatz nach „neue Bedeutung“."},
+      {q:"Welche Aussage entspricht dem Text?",o:["Nach einem Fehler sollte man sofort aufhören.","Durch Singen kann man einen Text anders verstehen.","Die Schülerinnen wollten beim nächsten Mal weniger proben."],a:1,h:"Zwei Aussagen widersprechen dem letzten Teil des Textes."},
+      {q:"Was ist die Hauptaussage des Textes?",o:["Eine Musikstunde ist nur erfolgreich, wenn alles perfekt läuft.","Deutschsprachige Lieder sind immer langsam und nachdenklich.","Musik kann Sprachlernen, Mut und Gemeinschaft fördern."],a:2,h:"Welche Idee verbindet das Fazit mit den Erfahrungen der Schülerinnen?"}
+    ];
+    const grammar = [
+      {q:"Die Schülerinnen waren nervös, ___ sie gut vorbereitet waren.",o:["obwohl","deshalb","damit"],a:0,h:"Gesucht ist ein Gegensatz; das Verb steht am Ende."},
+      {q:"Bevor die erste Gruppe ___, erklärte sie ihr Lied.",o:["gesungen hat","sang","singen würde"],a:1,h:"Der Text erzählt in der Vergangenheit; nach „bevor“ passt hier Präteritum."},
+      {q:"Das ist das Lied, ___ Text uns besonders berührt hat.",o:["dessen","dem","den"],a:0,h:"Der Text gehört zu dem Lied: Genitiv im Relativsatz."},
+      {q:"Die Musik funktionierte nicht. ___ konnte die Gruppe weitermachen.",o:["Trotzdem","Weil","Während"],a:0,h:"Gesucht ist ein Konnektor für einen unerwarteten Gegensatz."},
+      {q:"Wenn wir mehr Zeit gehabt hätten, ___ wir länger geprobt.",o:["haben","hätten","würden"],a:1,h:"Irreale Vergangenheit: hätte/wäre + Partizip II."},
+      {q:"Die Lehrerin fragte, ___ die Schülerinnen ein Schlusslied singen wollten.",o:["dass","ob","denn"],a:1,h:"Es handelt sich um eine indirekte Ja-/Nein-Frage."},
+      {q:"Während der Präsentation ___ aufmerksam zugehört.",o:["wurde","wurden","war"],a:0,h:"Unpersönliches Passiv: Es wurde zugehört."},
+      {q:"Nach der ___ Präsentation applaudierte das Publikum.",o:["gelungenen","gelungene","gelungener"],a:0,h:"Nach „der“ und Dativ feminin erhält das Adjektiv die Endung -en."}
+    ];
+    const vocabulary = [
+      {q:"Was bedeutet „auftreten“ im Text?",o:["vor einem Publikum etwas präsentieren","plötzlich krank werden","einen Raum verlassen"],a:0},
+      {q:"Welche Erklärung passt zu „Botschaft“?",o:["die Lautstärke eines Liedes","die zentrale Aussage oder Idee","die Länge einer Strophe"],a:1},
+      {q:"Das Programm war „abwechslungsreich“. Das bedeutet: Es war …",o:["vielfältig und nicht eintönig","schlecht vorbereitet","besonders leise"],a:0},
+      {q:"Welches Verb hat eine ähnliche Bedeutung wie „aufgeben“?",o:["weiterüben","nicht mehr weitermachen","gemeinsam anfangen"],a:1},
+      {q:"„Gefühle vermitteln“ bedeutet …",o:["Gefühle verstecken","Gefühle ausdrücken und weitergeben","Gefühle übersetzen"],a:1},
+      {q:"Was macht eine Gruppe, wenn sie für einen Auftritt „probt“?",o:["Sie übt vor der Präsentation.","Sie bewertet das Publikum.","Sie schreibt eine Prüfung."],a:0},
+      {q:"Eine „gelungene Präsentation“ ist eine Präsentation, die …",o:["zu spät beginnt","erfolgreich ist","niemand versteht"],a:1}
+    ];
+    const cloze = [
+      {q:"Nach der Präsentation sprachen die Schülerinnen über ihre ___.",o:["Eindrücke","Instrumente","Pausen"],a:0},
+      {q:"Vor dem Auftritt waren viele noch sehr ___.",o:["langweilig","aufgeregt","unsichtbar"],a:1},
+      {q:"Als die Musik begann, hörte das Publikum aufmerksam ___.",o:["zu","an","mit"],a:0},
+      {q:"Obwohl es ein kleines Problem gab, blieb die Stimmung ___.",o:["positiv","leer","stumm"],a:0},
+      {q:"Die Gruppen unterstützten einander, ___ alle weitermachen konnten.",o:["obwohl","damit","während"],a:1},
+      {q:"Am Ende waren die Schülerinnen stolz ___ ihre Leistung.",o:["für","über","auf"],a:2},
+      {q:"Sie waren überzeugt, dass Musik das Lernen ___.",o:["bereichert","vergisst","verliert"],a:0}
+    ];
+    const all = [...reading,...grammar,...vocabulary,...cloze]; let state=all.map(()=>({attempts:0,locked:false,correct:false})); let remaining=2400, timerId=null, startedAt=null, finished=false;
+    const $=s=>document.querySelector(s);
+    function render(list,target,offset){target.innerHTML=list.map((item,i)=>{const n=i+offset;return `<article class="question" id="q${n}"><div class="qtop"><div class="qnum">${n+1}</div><div class="qtext">${item.q}</div></div><div class="options">${item.o.map((x,j)=>`<label class="option"><input type="radio" name="q${n}" value="${j}"><span>${x}</span></label>`).join('')}</div><div class="qfooter"><button class="check" type="button" data-q="${n}">Antwort prüfen</button><span class="attempts" id="attempt${n}">1 Versuch</span><span class="feedback" id="feedback${n}" aria-live="polite"></span></div></article>`}).join('')}
+    render(reading,$('#readingQuestions'),0);render(grammar,$('#grammarQuestions'),reading.length);render(vocabulary,$('#vocabularyQuestions'),reading.length+grammar.length);render(cloze,$('#clozeQuestions'),reading.length+grammar.length+vocabulary.length);
+    function enterFullscreen(){document.documentElement.requestFullscreen?.().catch(()=>{});}
+    $('#fullscreenBtn').addEventListener('click',enterFullscreen);
+    $('#startBtn').addEventListener('click',()=>{const name=$('#studentName').value.trim();if(!name){$('#studentName').focus();$('#studentName').style.borderColor='var(--bad)';return}enterFullscreen();$('#intro').hidden=true;$('#activity').hidden=false;startedAt=Date.now();timerId=setInterval(tick,1000);window.scrollTo({top:0,behavior:'smooth'});});
+    function tick(){remaining=Math.max(0,remaining-1);const m=String(Math.floor(remaining/60)).padStart(2,'0'),s=String(remaining%60).padStart(2,'0');$('#timer').textContent=`${m}:${s}`;if(remaining<=300)$('#timerBox').classList.add('urgent');if(remaining===0)finish(true)}
+    document.addEventListener('click',e=>{const b=e.target.closest('.check');if(!b||finished)return;checkQuestion(Number(b.dataset.q))});
+    function checkQuestion(i){if(state[i].locked)return;const selected=document.querySelector(`input[name=q${i}]:checked`);const fb=$(`#feedback${i}`);if(!selected){fb.className='feedback bad';fb.textContent='Wähle zuerst eine Antwort.';return}state[i].attempts=1;state[i].locked=true;if(Number(selected.value)===all[i].a){state[i].correct=true;fb.className='feedback ok';fb.textContent='Richtig!';lock(i,'correct')}else{fb.className='feedback bad';fb.textContent=`Leider falsch. Richtig: ${all[i].o[all[i].a]}`;lock(i,'wrong-final')}updateProgress()}
+    function lock(i,cls){const q=$(`#q${i}`);q.classList.add(cls);q.querySelectorAll('input').forEach(x=>x.disabled=true);q.querySelector('.check').disabled=true;$(`#attempt${i}`).textContent='Abgeschlossen'}
+    function updateProgress(){const done=state.filter(x=>x.locked).length;$('#progressFill').style.width=`${done/all.length*100}%`}
+    $('#finishBtn').addEventListener('click',()=>finish(false));
+    function finish(auto){if(finished)return;if(!auto&&state.some(x=>!x.locked)&&!confirm('Es sind noch Fragen offen. Trotzdem abgeben?'))return;finished=true;clearInterval(timerId);document.querySelectorAll('input,.check').forEach(x=>x.disabled=true);const score=state.filter(x=>x.correct).length,pct=score/all.length*100;const grade=pct<=50?1+3*(pct/50):4+3*((pct-50)/50);const elapsed=Math.min(2400,Math.round((Date.now()-startedAt)/1000));$('#activity').hidden=true;$('#result').hidden=false;$('#resultName').textContent=`${$('#studentName').value.trim()}, dein Ergebnis`+(auto?' · Zeit abgelaufen':'');$('#grade').textContent=grade.toFixed(1).replace('.',',');$('#points').textContent=`${score} / ${all.length}`;$('#percent').textContent=`${Math.round(pct)} %`;$('#usedTime').textContent=`${String(Math.floor(elapsed/60)).padStart(2,'0')}:${String(elapsed%60).padStart(2,'0')}`;$('#progressFill').style.width='100%';window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});window.onbeforeunload=null}
+    document.addEventListener('visibilitychange',()=>{if(document.hidden||finished)return;const n=$('#awayNote');n.classList.add('show');setTimeout(()=>n.classList.remove('show'),3500)});
+    window.addEventListener('beforeunload',e=>{if(startedAt&&!finished){e.preventDefault();e.returnValue=''}});
+    document.addEventListener('contextmenu',e=>{if(startedAt&&!finished)e.preventDefault()});
+    document.addEventListener('keydown',e=>{if(!startedAt||finished)return;const k=e.key.toLowerCase();if((e.ctrlKey||e.metaKey)&&['l','t','n','w','r','u'].includes(k)){e.preventDefault();$('#awayNote').classList.add('show');setTimeout(()=>$('#awayNote').classList.remove('show'),2500)}});
+  </script>
+</body>
+</html>
